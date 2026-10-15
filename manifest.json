@@ -1,0 +1,10 @@
+{
+  "id": "lifeos",
+  "name": "LifeOS",
+  "version": "0.1.1",
+  "minAppVersion": "1.5.0",
+  "description": "Агенты day-planner и content-pipeline через OpenCode CLI + DeepSeek: утренний план, чек-ины, итоги дня, контент-конвейер и чат — без выхода из Obsidian.",
+  "author": "CrazeElephant",
+  "authorUrl": "https://github.com/CrazyElephantX",
+  "isDesktopOnly": true
+}

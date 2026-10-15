@@ -1,0 +1,29 @@
+{
+  "name": "lifeos",
+  "version": "0.1.1",
+  "description": "LifeOS — Obsidian plugin: agents day-planner / content-pipeline via OpenCode CLI + DeepSeek",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "sync": "bash scripts/sync-to-vault.sh"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "agent",
+    "opencode"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@obsidian-ai-providers/sdk": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.21.5",
+    "obsidian": "^1.7.2",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4"
+  }
+}

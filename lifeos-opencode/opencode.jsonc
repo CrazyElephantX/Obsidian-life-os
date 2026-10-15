@@ -1,0 +1,53 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "deepseek": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "DeepSeek",
+      "options": {
+        "baseURL": "https://api.deepseek.com",
+        "apiKey": "{env:DEEPSEEK_API_KEY}"
+      },
+      "models": {
+        "deepseek-flash": {},
+        "deepseek-v4-pro": {}
+      }
+    }
+  },
+  "agent": {
+    "day-planner": {
+      "mode": "primary",
+      "model": "deepseek/deepseek-flash",
+      "prompt": "{file:./agent/day-planner.md}",
+      "permission": {
+        "read": "allow",
+        "edit": {
+          "*": "deny",
+          "1. Проекты/diary/**": "allow"
+        },
+        "bash": "deny",
+        "webfetch": "deny",
+        "websearch": "deny",
+        "question": "deny",
+        "skill": "allow"
+      }
+    },
+    "content-pipeline": {
+      "mode": "primary",
+      "model": "deepseek/deepseek-flash",
+      "prompt": "{file:./agent/content-pipeline.md}",
+      "permission": {
+        "read": "allow",
+        "edit": {
+          "*": "deny",
+          "1. Проекты/Личный бренд/Посты/**": "allow"
+        },
+        "bash": "deny",
+        "webfetch": "deny",
+        "websearch": "deny",
+        "question": "deny",
+        "skill": "allow"
+      }
+    }
+  }
+}
